@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BBD913D7-826E-4FDE-A7FB-FEC3E6C69422</string>
+	<string>629E98B7-16FF-4D7D-9D41-B09732CA66F8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Tac</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>786113C3-5F10-4984-960F-05AC1936EF16</key>
-		<string>https://github.com/Kalson/iOS-K.git</string>
+		<key>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</key>
+		<string>https://github.com/Kalson/Tac.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Tac/Tac.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>786113C3-5F10-4984-960F-05AC1936EF16</key>
+		<key>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Kalson/iOS-K.git</string>
+	<string>https://github.com/Kalson/Tac.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>786113C3-5F10-4984-960F-05AC1936EF16</string>
+	<string>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>786113C3-5F10-4984-960F-05AC1936EF16</string>
+			<string>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOS-K</string>
+			<string>Tac</string>
 		</dict>
 	</array>
 </dict>
