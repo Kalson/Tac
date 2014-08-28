@@ -37,6 +37,7 @@
         self.player1Turn = YES;
         
         possibilities = @[
+                           // indexes 0  1  2
                                    @[@0,@1,@2],
                                    @[@3,@4,@5],
                                    @[@6,@7,@8],
@@ -64,6 +65,21 @@
 
 - (void)robotChooseSpot
 {
+    if([self findWinningSpot])
+    {
+        self.player1Turn = !self.player1Turn;
+        [self checkForWinner];
+        return;
+    }
+    
+    if([self findWinningSpot])
+    {
+        self.player1Turn = !self.player1Turn;
+        [self checkForWinner];
+        return;
+    }
+    
+        
     for (TTTTouchSpot *spot in self.spots)
         
         // set a spot.player
@@ -84,10 +100,70 @@
         }
 }
 
+- (BOOL)findWinningSpot
+{
+    for (NSArray *possibility in possibilities)
+    {
+        
+        if ([self checkForSpotsWithSpots:possibility player:2])return YES;
+        
+        NSArray *possibility2 = @[possibility[1],possibility[2], possibility[0]];
+        if ([self checkForSpotsWithSpots:possibility2 player:2])return YES;
+        
+        NSArray *possibility3 = @[possibility[2],possibility[0], possibility[1]];
+        if ([self checkForSpotsWithSpots:possibility3 player:2])return YES;
+
+    }
+    
+    return NO;
+}
+
+- (BOOL)checkForSpotsWithSpots:(NSArray *)spots player:(int)player
+{
+    TTTTouchSpot *spot0 = self.spots[[spots[0]intValue]];
+    TTTTouchSpot *spot1 = self.spots[[spots[1]intValue]];
+    TTTTouchSpot *spot2 = self.spots[[spots[2]intValue]];
+    
+    if (spot0.player == 2 && spot1.player == 2 && spot2.player == 0)
+    {
+         // player2 (player = 2) is the robot
+        spot2.player = 2;
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)robotBlockingSpot
+{
+    for (NSArray *possibility in possibilities)
+    {
+        
+        if ([self checkForSpotsWithSpots:possibility player:1])return YES;
+        
+        NSArray *possibility2 = @[possibility[1],possibility[2], possibility[0]];
+        if ([self checkForSpotsWithSpots:possibility2 player:1])return YES;
+        
+        NSArray *possibility3 = @[possibility[2],possibility[0], possibility[1]];
+        if ([self checkForSpotsWithSpots:possibility3 player:1])return YES;
+        
+    }
+    
+    return NO;
+}
+
+- (BOOL)robotFindRandomSpot
+{
+    for (NSArray *possibility in possibilities)
+    {
+        TTTTouchSpot *spot0 = self.spots[[possibility[0]intValue]];
+        TTTTouchSpot *spot1 = self.spots[[possibility[1]intValue]];
+        TTTTouchSpot *spot2 = self.spots[[possibility[2]intValue]];
+    }
+    return NO;
+}
+
 - (void)checkForWinner
 {
-  
-    
     BOOL winner = NO;
     
     for (NSArray *possibility in possibilities)
