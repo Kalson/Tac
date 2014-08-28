@@ -36,6 +36,40 @@
     return self;
 }
 
+- (void)setPlayer1Turn:(BOOL)player1Turn
+{
+    _player1Turn = player1Turn;
+    
+    if (player1Turn == NO)
+    {
+        // run robot
+        
+        [self robotChooseSpot];
+    }
+}
+
+- (void)robotChooseSpot
+{
+    for (TTTTouchSpot *spot in self.spots)
+        
+        // set a spot.player
+        // change player1Turn
+        // checkForWinner
+        if (spot.player == 0) {
+            
+            // chooses the spot
+            spot.player = 2;
+            
+            // now we want to stop the loop
+            
+            // switches to the next player
+            self.player1Turn = !self.player1Turn;
+            [self checkForWinner];
+            
+            return;
+        }
+}
+
 - (void)checkForWinner
 {
     NSArray *possibilities = @[
@@ -80,6 +114,16 @@
         [alert show];
     }
     
+}
+
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    self.player1Turn = YES;
+    
+    for (TTTTouchSpot *spot in self.spots) {
+        spot.player = 0;
+    }
 }
 
 @end
