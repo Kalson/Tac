@@ -12,4 +12,6 @@
 
 + (TTTGameData *)mainData;
 
+- (void)checkForWinner;
+
 @end
