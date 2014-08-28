@@ -10,29 +10,29 @@
 	<string>Tac</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</key>
+		<key>8C5F663EFB75B4036ECBC0FC01E58E03E59498E3</key>
 		<string>https://github.com/Kalson/Tac.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Tac/Tac.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</key>
+		<key>8C5F663EFB75B4036ECBC0FC01E58E03E59498E3</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Kalson/Tac.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</string>
+	<string>8C5F663EFB75B4036ECBC0FC01E58E03E59498E3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AC3AAE2D-7FE0-4625-A509-D526D214E6DA</string>
+			<string>8C5F663EFB75B4036ECBC0FC01E58E03E59498E3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Tac</string>
 		</dict>

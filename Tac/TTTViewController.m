@@ -156,33 +156,12 @@
         if (spot.player == 0) emptySpots++;
     }
     
-    if (emptySpots == 0 && !winner) {
+    if (emptySpots == 0 && !winner)
+    {
         // draw
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Winner" message:@"No player won." delegate:self cancelButtonTitle:@"Start Over" otherButtonTitles:nil];
         [alert show];
     }
-    
-    // if 0, 1, 2 = same color... then color wins
-    
-
-    
-//    if ([spot0.backgroundColor isEqual:spot1.backgroundColor] && [spot1.backgroundColor isEqual:spot2.backgroundColor])
-//    {
-//        if ([spot0.backgroundColor isEqual:[UIColor cyanColor]])
-//            {
-//                // then player 1 wins
-//                NSLog(@"player 1 wins");
-//                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"You Won" message:@"Your the Winner" delegate:self cancelButtonTitle:@"Im Awesome!!!" otherButtonTitles:nil];
-//                [alert show];
-//                
-//                } else if ([spot0.backgroundColor isEqual:[UIColor magentaColor]])
-//                {
-//                    // player 2 wins
-//                    NSLog(@"player 2 wins");
-//                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"You Lost" message:@"Your the Loser" delegate:self cancelButtonTitle:@"You suck!!!" otherButtonTitles:nil];
-//                    [alert show];
-//                }
-//    }
     
 }
 

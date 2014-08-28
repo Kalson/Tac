@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260870E419AF753D005FF253 /* TTTGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 260870E319AF753D005FF253 /* TTTGameData.m */; };
 		26B3BAE21987D94E006E8122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B3BAE11987D94E006E8122 /* Foundation.framework */; };
 		26B3BAE41987D94E006E8122 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B3BAE31987D94E006E8122 /* CoreGraphics.framework */; };
 		26B3BAE61987D94E006E8122 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B3BAE51987D94E006E8122 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260870E219AF753D005FF253 /* TTTGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTGameData.h; sourceTree = "<group>"; };
+		260870E319AF753D005FF253 /* TTTGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTGameData.m; sourceTree = "<group>"; };
 		26B3BADE1987D94E006E8122 /* Tac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B3BAE11987D94E006E8122 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26B3BAE31987D94E006E8122 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 		26B3BAD51987D94E006E8122 = {
 			isa = PBXGroup;
 			children = (
+				260870E219AF753D005FF253 /* TTTGameData.h */,
+				260870E319AF753D005FF253 /* TTTGameData.m */,
 				26BBD5A41987DBC400B4A9DF /* Controllers */,
 				26B3BAE71987D94E006E8122 /* Tac */,
 				26B3BB001987D94E006E8122 /* TacTests */,
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260870E419AF753D005FF253 /* TTTGameData.m in Sources */,
 				26BBD5A71987DC2600B4A9DF /* TTTViewController.m in Sources */,
 				26B3BAEE1987D94E006E8122 /* main.m in Sources */,
 				26BBD5AB1987DD4400B4A9DF /* TTTTouchSpot.m in Sources */,
