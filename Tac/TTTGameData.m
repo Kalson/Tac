@@ -10,6 +10,9 @@
 #import "TTTTouchSpot.h"
 
 @implementation TTTGameData
+{
+    NSArray *possibilities;
+}
 
 + (TTTGameData *)mainData
 {
@@ -32,6 +35,17 @@
     if (self) {
         self.spots = [@[]mutableCopy];
         self.player1Turn = YES;
+        
+        possibilities = @[
+                                   @[@0,@1,@2],
+                                   @[@3,@4,@5],
+                                   @[@6,@7,@8],
+                                   @[@0,@3,@6],
+                                   @[@1,@4,@7],
+                                   @[@2,@5,@8],
+                                   @[@0,@4,@8],
+                                   @[@2,@4,@6],
+                                   ];
     }
     return self;
 }
@@ -72,16 +86,7 @@
 
 - (void)checkForWinner
 {
-    NSArray *possibilities = @[
-                               @[@0,@1,@2],
-                               @[@3,@4,@5],
-                               @[@6,@7,@8],
-                               @[@0,@3,@6],
-                               @[@1,@4,@7],
-                               @[@2,@5,@8],
-                               @[@0,@4,@8],
-                               @[@2,@4,@6],
-                               ];
+  
     
     BOOL winner = NO;
     
