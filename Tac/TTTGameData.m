@@ -7,6 +7,7 @@
 //
 
 #import "TTTGameData.h"
+#import "TTTTouchSpot.h"
 
 @implementation TTTGameData
 
@@ -18,11 +19,21 @@
     static TTTGameData *singleton = nil;
     
     // its nil first, then its alloc/init
+    // aingleton are made to be only alloc/init once
     dispatch_once(&onceToken, ^{
         singleton = [[TTTGameData alloc]init];
     });
     
     return singleton;
+}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.spots = [@[]mutableCopy];
+        self.player1Turn = YES;
+    }
+    return self;
 }
 
 - (void)checkForWinner
@@ -42,9 +53,9 @@
     
     for (NSArray *possibility in possibilities)
     {
-        TTTTouchSpot *spot0 = spots[[possibility[0]intValue]];
-        TTTTouchSpot *spot1 = spots[[possibility[1]intValue]];
-        TTTTouchSpot *spot2 = spots[[possibility[2]intValue]];
+        TTTTouchSpot *spot0 = self.spots[[possibility[0]intValue]];
+        TTTTouchSpot *spot1 = self.spots[[possibility[1]intValue]];
+        TTTTouchSpot *spot2 = self.spots[[possibility[2]intValue]];
         
         if (spot0.player == spot1.player && spot1.player == spot2.player && spot0.player != 0)
         {
@@ -58,7 +69,7 @@
     
     int emptySpots = 0;
     
-    for (TTTTouchSpot *spot in spots) {
+    for (TTTTouchSpot *spot in self.spots) {
         if (spot.player == 0) emptySpots++;
     }
     

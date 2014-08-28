@@ -14,4 +14,7 @@
 
 - (void)checkForWinner;
 
+@property (nonatomic) NSMutableArray *spots;
+@property (nonatomic) BOOL player1Turn;
+
 @end

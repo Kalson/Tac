@@ -16,11 +16,6 @@
 @end
 
 @implementation TTTViewController
-{
-    NSMutableArray *spots;
-    
-    BOOL player1Turn;
-}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,9 +24,7 @@
     if (self) {
         // Custom initialization
         
-        spots = [@[]mutableCopy];
-        
-        player1Turn = YES;
+   
     }
     return self;
 }
@@ -65,7 +58,7 @@
             
             [self.view addSubview:spot];
             
-            [spots addObject:spot];
+            [[TTTGameData mainData].spots addObject:spot];
             
             
             // run for each column in each row
@@ -83,7 +76,7 @@
     
     int spotWH = 80;
     
-    for (TTTTouchSpot *spot in spots)
+    for (TTTTouchSpot *spot in [TTTGameData mainData].spots)
     {
         CGPoint location = [touch locationInView:spot];
         
@@ -105,9 +98,9 @@
 //                    UIColor *color = (player1Turn) ? [UIColor cyanColor] : [UIColor magentaColor];
 //                    spot.backgroundColor = color;
                     
-                    spot.player = (player1Turn) ? 1 : 2;
+                    spot.player = ([TTTGameData mainData].player1Turn) ? 1 : 2;
                     
-                    player1Turn = !player1Turn;
+                    [TTTGameData mainData].player1Turn = ![TTTGameData mainData].player1Turn;
                     
                     [[TTTGameData mainData] checkForWinner];
                 }
@@ -125,7 +118,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    for (TTTTouchSpot *spot in spots) {
+    for (TTTTouchSpot *spot in [TTTGameData mainData].spots) {
         spot.player = 0;
     }
 }
