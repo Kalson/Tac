@@ -22,7 +22,7 @@
     static TTTGameData *singleton = nil;
     
     // its nil first, then its alloc/init
-    // aingleton are made to be only alloc/init once
+    // singleton are made to be only alloc/init once
     dispatch_once(&onceToken, ^{
         singleton = [[TTTGameData alloc]init];
     });
